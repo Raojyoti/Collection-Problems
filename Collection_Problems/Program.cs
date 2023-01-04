@@ -9,6 +9,7 @@ namespace Collection_Demo
         public static void Main(string[] args)
         {
             List();
+            Stack();
         }
         public static void List()
         {
@@ -24,6 +25,23 @@ namespace Collection_Demo
             {
                 Console.WriteLine(values);
             }
+        }
+        public static void Stack()
+        {
+            Stack<int> stack = new Stack<int>();
+            stack.Push(500);
+            stack.Push(400);
+            stack.Push(200);
+            stack.Push(700);
+            stack.Push(900);
+            int popvalue = stack.Pop();
+            Console.WriteLine("Values in Stack are: ");
+            Console.WriteLine("-----------------------------------------------");
+            foreach (var values in stack)
+            {
+                Console.WriteLine(values);
+            }
+            Console.WriteLine("Deleted value is: " + popvalue);
         }
     }
 }
