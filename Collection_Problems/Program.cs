@@ -11,6 +11,7 @@ namespace Collection_Demo
             List();
             Stack();
             Queue();
+            Set();
         }
         public static void List()
         {
@@ -62,6 +63,22 @@ namespace Collection_Demo
             }
             Console.WriteLine("Peek value is: " + peekvalue);
             Console.WriteLine("Dequeue value is: " + dequeuevalue);
+        }
+        public static void Set()
+        {
+            var set = new HashSet<int>();
+            set.Add(500);
+            set.Add(400);
+            set.Add(200);
+            set.Add(700);
+            set.Add(900);
+            Console.WriteLine("Values in Set are: ");
+            Console.WriteLine("-----------------------------------------------");
+            HashSet<int>.Enumerator enumerator = set.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.MoveNext());
+            }
         }
     }
 }
