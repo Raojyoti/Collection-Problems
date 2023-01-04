@@ -10,6 +10,7 @@ namespace Collection_Demo
         {
             List();
             Stack();
+            Queue();
         }
         public static void List()
         {
@@ -42,6 +43,25 @@ namespace Collection_Demo
                 Console.WriteLine(values);
             }
             Console.WriteLine("Deleted value is: " + popvalue);
+        }
+        public static void Queue()
+        {
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(500);
+            queue.Enqueue(400);
+            queue.Enqueue(200);
+            queue.Enqueue(700);
+            queue.Enqueue(900);
+            int peekvalue = queue.Peek();
+            int dequeuevalue = queue.Dequeue();
+            Console.WriteLine("Values in Queue are: ");
+            Console.WriteLine("-----------------------------------------------");
+            foreach (var values in queue)
+            {
+                Console.WriteLine(values);
+            }
+            Console.WriteLine("Peek value is: " + peekvalue);
+            Console.WriteLine("Dequeue value is: " + dequeuevalue);
         }
     }
 }
