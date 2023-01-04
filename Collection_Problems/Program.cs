@@ -12,6 +12,7 @@ namespace Collection_Demo
             Stack();
             Queue();
             Set();
+            Dictinory();
         }
         public static void List()
         {
@@ -79,6 +80,24 @@ namespace Collection_Demo
             {
                 Console.WriteLine(enumerator.MoveNext());
             }
+        }
+        public static void Dictinory()
+        {
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            dictionary.Add(500, "Apple");
+            dictionary.Add(400, "Banana");
+            dictionary.Add(200, "Mango");
+            dictionary.Add(700, "Peach");
+            dictionary.Add(900, "Orange");
+            string accesskeyvalue = dictionary[200];
+            Console.WriteLine("Values in Dictinory are: ");
+            Console.WriteLine("-----------------------------------------------");
+
+            foreach (var element in dictionary)
+            {
+                Console.WriteLine("Element_Key {0}", element.Key + "Element_Value {1}", element.Value);
+            }
+            Console.WriteLine("Access value {0}", accesskeyvalue);
         }
     }
 }
